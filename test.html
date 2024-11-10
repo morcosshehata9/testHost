@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Slideshow</title>
+  <style>
+    /* Container styling */
+    .slideshow-container {
+      width: 100%;
+      max-width: 600px;
+      margin: auto;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Image styling */
+    .slide {
+      display: none;
+      width: 100%;
+    }
+
+    /* Animation for changing slides */
+    @keyframes slide-animation {
+      0% { opacity: 1; }
+      20% { opacity: 1; }
+      25% { opacity: 0; }
+      95% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    /* Assign each image an animation with delay */
+    .slide:nth-child(1) {
+      animation: slide-animation 20s infinite;
+      display: block;
+    }
+    .slide:nth-child(2) {
+      animation: slide-animation 20s infinite;
+      animation-delay: 5s;
+    }
+    .slide:nth-child(3) {
+      animation: slide-animation 20s infinite;
+      animation-delay: 10s;
+    }
+    .slide:nth-child(4) {
+      animation: slide-animation 20s infinite;
+      animation-delay: 15s;
+    }
+  </style>
+</head>
+<body>
+
+<div class="slideshow-container">
+  <img src="img/1.jpg.webp" class="slide" alt="Image 1">
+  <img src="img/facebook.png" class="slide" alt="Image 2">
+  <img src="img/instagram.png" class="slide" alt="Image 3">
+  <img src="img/4.jpg.webp" class="slide" alt="Image 4">
+</div>
+
+</body>
+</html>
